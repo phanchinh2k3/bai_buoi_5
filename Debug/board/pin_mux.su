@@ -1,0 +1,6 @@
+D:\MCUXpresso\CODE\bai5_gpio_input_interrupt\drivers/fsl_clock.h:546:20:CLOCK_EnableClock	32	static
+D:\MCUXpresso\CODE\bai5_gpio_input_interrupt\drivers/fsl_reset.h:196:20:RESET_ReleasePeripheralReset	16	static
+D:\MCUXpresso\CODE\bai5_gpio_input_interrupt\drivers/fsl_port.h:360:20:PORT_SetPinConfig	32	static
+D:\MCUXpresso\CODE\bai5_gpio_input_interrupt\drivers/fsl_port.h:463:20:PORT_SetPinMux	24	static
+../board/pin_mux.c:38:6:BOARD_InitBootPins	8	static
+../board/pin_mux.c:67:6:BOARD_InitPins	32	static

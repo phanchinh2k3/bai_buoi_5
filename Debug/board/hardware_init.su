@@ -1,0 +1,2 @@
+D:\MCUXpresso\CODE\bai5_gpio_input_interrupt\drivers/fsl_clock.h:546:20:CLOCK_EnableClock	32	static
+../board/hardware_init.c:16:6:BOARD_InitHardware	8	static
