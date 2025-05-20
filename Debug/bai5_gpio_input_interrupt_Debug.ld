@@ -6,7 +6,7 @@
  * Generated linker script file for MCXA153
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on May 16, 2025, 4:04:27 PM
+ * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on May 20, 2025, 11:46:28 AM
  */
 
 INCLUDE "bai5_gpio_input_interrupt_Debug_library.ld"

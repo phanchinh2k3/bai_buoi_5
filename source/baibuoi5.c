@@ -34,6 +34,7 @@
 /* Whether the SW button is pressed */
 volatile uint32_t tick = 0;
 volatile uint8_t state = 0;
+volatile bool toggle = false;
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -43,6 +44,15 @@ volatile uint8_t state = 0;
  *
  * This function toggles the LED
  */
+
+void main1(void){
+    GPIO_PinWrite(led1_GPIO, led1_Pin, toggle);
+    GPIO_PinWrite(led2_GPIO, led2_Pin, 0);
+}
+void main2(void){
+    GPIO_PinWrite(led2_GPIO, led2_Pin, toggle);
+    GPIO_PinWrite(led1_GPIO, led1_Pin, 0);
+}
 void SysTick_Handler(void);
 void delay_ms(uint32_t ms);
 void BOARD_SW_IRQ_HANDLER(void)
@@ -63,6 +73,7 @@ void BOARD_SW_IRQ_HANDLER(void)
 /*!
  * @brief Main function
  */
+
 void SysTick_Handler(void)
 {
     tick++;
@@ -76,13 +87,11 @@ void SysTick_Handler(void)
 
         if (state == 1)
         {
-            GPIO_PinWrite(led1_GPIO, led1_Pin, toggle);
-            GPIO_PinWrite(led2_GPIO, led2_Pin, 0); // tắt LED2
+          main1();
         }
         else if (state == 2)
         {
-            GPIO_PinWrite(led2_GPIO, led2_Pin, toggle);
-            GPIO_PinWrite(led1_GPIO, led1_Pin, 0); // tắt LED1
+        	main2();
         }
         else
         {
